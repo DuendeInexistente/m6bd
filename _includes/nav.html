@@ -1,0 +1,13 @@
+<nav>
+	<div style="font-family:monospace;font-weight:bold">
+	{% for pages in site.pages %}
+	<a id="{{ pages.capitulo }}-{{ pages.pagina }}"></a>
+
+	{% if pages.url == page.url %}&#187;{% endif %}
+	{% if pages.url != page.url %}-<a href="{{ pages.url }}">{% endif %}
+		{{ pages.capitulo }} - {{ pages.pagina }}
+	{% if pages.url != page.url %}</a>{% endif %}
+	<br>
+	{% endfor %}
+	</div>
+</nav>

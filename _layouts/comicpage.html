@@ -7,14 +7,16 @@
     <link rel='stylesheet' href='/styles/page.css'>
   </head>
   <body>
+	  <div class="nav">{% include nav.html %}</div>
+	  <div class="page">
 
-	  <div class="pagina"><img alt="{{ page.alt }}" src="{{ page.imagen }}"></img></div>
-	  <br>
-	  <div class="titulo">KBSD {{ page.capitulo}}—{{ page.pagina }}</div>
-	  
-	  <div class="creditos">Por Abbaddon. Traducido por {{ page.creditos }}</div>
+		 <div class="pagina"><img alt="{{ page.alt }}" src="{{ page.imagen }}"></img></div>
+		  <br>
+		 <div class="titulo">KBSD {{ page.capitulo}}—{{ page.pagina }}</div>
+		 <div class="creditos">Por Abbaddon. Traducido por {{ page.creditos }}</div>
 
 		  <div class="diatriba">{{ content }}</div>
+	  </div>
 
 </body>
 </html>

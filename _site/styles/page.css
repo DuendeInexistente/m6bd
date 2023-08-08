@@ -6,11 +6,39 @@
     font-family: tahoma;
     color:white;
 }
+.nav {
+	float: left;
+	width: 10%;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x:hidden;
+}
+
+.page{
+	padding-left:8px;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x:hidden;
+}
+
 
 body {
     background-color: #191315;
     color:#ea2f45;
     font-family: 'Arial', sans-serif;
     font-size:14px;
-    align:center
+    align:center;
+    margin: 8px;
+    margin-top:0px ;
+    margin-bottom:0px ;
+}
+
+a {
+    color:#e9760d;
+}
+a:hover {
+    color:#f3b379;
+}
+a:visited {
+	color:#e9d10d;
 }
