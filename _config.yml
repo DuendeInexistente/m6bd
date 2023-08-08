@@ -1,0 +1,5 @@
+collections:
+ pages:
+         output: true
+         url: pages
+         sort_by: chapter

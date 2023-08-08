@@ -1,0 +1,16 @@
+.titulo {
+    font-weight: bold;
+    font-synthesis-small-caps: auto;
+    font-variant: small-caps;
+    font-size: larger;
+    font-family: tahoma;
+    color:white;
+}
+
+body {
+    background-color: #191315;
+    color:#ea2f45;
+    font-family: 'Arial', sans-serif;
+    font-size:14px;
+    align:center
+}
