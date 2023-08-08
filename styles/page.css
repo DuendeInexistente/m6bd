@@ -9,16 +9,19 @@
 .nav {
 	float: left;
 	width: 10%;
-	height: 100vh;
+	height: 98vh;
+	padding:1vh;
 	overflow-y: scroll;
 	overflow-x:hidden;
 }
 
 .page{
 	padding-left:8px;
-	height: 100vh;
+	height: 98vh;
+	padding:1vh;
 	overflow-y: scroll;
 	overflow-x:hidden;
+
 }
 
 
