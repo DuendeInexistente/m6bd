@@ -1,0 +1,112 @@
+{% assign next_i = nil %}
+{% assign prev_i = nil %}
+
+{% assign navpag = page.pagina %}
+{% assign prepag = navpag | minus: 1 %}
+{% assign nexpag = navpag | plus: 1 %}
+
+{% assign navcap = page.capitulo %}
+{% assign precap = navcap | minus: 1 %}
+{% assign nexcap = navcap | plus: 1 %}
+
+{% comment %}
+{{navpag}}
+{{prepag}}
+{{nexpag}}
+{{navcap}}
+{{precap}}
+{{nexcap}}
+{% endcomment %}
+
+
+			<p>
+				{% for pages in site.pages %}{% if forloop.first %}
+				<a href="{{pages.url}}">
+				{%endif%}{%endfor%}
+
+					&lt;---Prim. pagina
+				</a>
+			</p>
+			<p>][</p>
+			<p>
+				{% for pages in site.pages %}{% if pages.capitulo == precap and pages.pagina == 0 %}
+				<a href="{{pages.url}}">
+				{% endif %}{%endfor%}
+
+				&lt;--Cap. anterior
+
+				{% for pages in site.pages %}{% if pages.capitulo == precap and pages.pagina == 0 %}
+				</a>
+				{%endif%}{%endfor%}
+			</p>
+			<p>][</p>
+			<p>
+				{% for pages in site.pages %}{% if pages.url == page.url and forloop.first == false %}
+				<a href="{{forloop.index | minus: 1}}.html">
+				{% endif %}{%endfor%}
+				&lt;- Anterior
+				{% for pages in site.pages %}{% if pages.url == page.url and forloop.first == false %}
+				</a>
+				{% endif %}{%endfor%}
+			</p>
+			<p>]◝▩◜[</p>
+			<p>
+				{% for pages in site.pages %}{% if pages.url == page.url and forloop.last == false %}
+				<a href="{{forloop.index | plus: 1}}.html">
+				{% endif %}{%endfor%}
+				Proxima -&gt;
+				{% for pages in site.pages %}{% if pages.url == page.url and forloop.last == false %}
+				</a>
+				{% endif %}{%endfor%}
+			</p>
+			<p>][</p>
+			<p>
+				{% for pages in site.pages %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
+				<a href="{{pages.url}}">
+				{% endif %}{%endfor%}
+				Proximo cap. --&gt;
+				{% for pages in site.pages %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
+				</a>
+				{%endif%}{%endfor%}
+			</p>
+			<p>][</p>
+			<p>
+				{% for pages in site.pages %}{% if forloop.last %}
+				<a href="{{pages.url}}">
+				{%endif%}{%endfor%}
+				Ult. pagina---&gt;
+				</a>
+			</p>
+
+{% comment %}
+//Functional prevpage link! Kind of
+
+    {% for pages in site.pages %}
+      {% if pages.capitulo == page.capitulo %}
+        {% if pages.pagina == prepag %}
+	{% capture nexlin %} <a href="{{ pages.url }}">{{ pages.pagina }}</a> {% endcapture %}
+	{% endif %}
+      {% endif %}
+    {% endfor %}
+
+{{nexlin}}
+
+
+//Improvements
+{%capture endlin %} {% endcapture %}
+{{endlin}}
+
+    {% for pages in site.pages %}
+      {% if pages.capitulo == page.capitulo %}
+        {% if pages.pagina == prepag %}
+		{% capture nexlin %} <a href="{{ pages.url }}">{% endcapture %}
+		{%capture endlin %} ñ</a>{% endcapture %}
+	{% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {{endlin}}
+
+
+
+{% endcomment %}

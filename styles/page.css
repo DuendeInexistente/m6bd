@@ -29,6 +29,12 @@
 	flex-direction: column;
 }
 
+.navbutt{
+    display: flex;
+    justify-content: center;
+
+}
+
 .pagina{
 	align-self:center;
 }
