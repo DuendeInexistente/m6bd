@@ -1,0 +1,3 @@
+{% for trans in site.transcripts %}{% if trans.capitulo == page.capitulo and trans.pagina == page.pagina %}
+				{{trans.content}}
+{% endif %}{%endfor%}

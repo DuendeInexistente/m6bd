@@ -3,3 +3,7 @@ collections:
          output: true
          url: pages
          sort_by: capitulo
+ transcripts:
+         output: true
+         url: transcripts
+         sort_by: capitulo

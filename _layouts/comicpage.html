@@ -17,11 +17,16 @@
 			  {% include navbutt.html %}
 		  </div>
 		 <div class="titulo">KBSD {{ page.capitulo }}—{{ page.pagina }}</div>
-		 <div class="creditos">Por Abbaddon. Traducido por {{ page.creditos }}</div>
+		 <div class="creditos">Por Abbaddon. Traducido por {{ page.creditos }}.<a href="{{ page.oglink }}"> Link to pagina original.</a></div>
 
 		  <div class="diatriba">{{ content }}</div>
-		 </div></div>
+<details>
+    <summary>Transcripcion</summary>
+{% include transcripcion.html %}
 
+
+</details>
+		 </div></div>
 
 </body>
 </html>
