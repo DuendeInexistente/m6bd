@@ -6,6 +6,10 @@
     font-family: tahoma;
     color:white;
 }
+
+.creditos {
+	font-size:small;
+}
 .nav {
 	float: left;
 	width: 10%;
@@ -21,9 +25,13 @@
 	padding:1vh;
 	overflow-y: scroll;
 	overflow-x:hidden;
-
+	display: flex;
+	flex-direction: column;
 }
 
+.pagina{
+	align-self:center;
+}
 
 body {
     background-color: #191315;
