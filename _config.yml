@@ -7,8 +7,6 @@ collections:
          url: transcripts
          sort_by: capitulo
 
-plugins:
-  - jekyll-image-size
 
 defaults:
   - scope:
