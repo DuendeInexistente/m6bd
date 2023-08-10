@@ -14,7 +14,17 @@ defaults:
     values:
           layout: comicpage
           imagen: ksbdcoverchapter1.webp
-          alt: MATA SEIS BILLONES DE DEMONIOS
+          alt:
+          capitulo: 99
+          pagina: 99
+          libro: 99
+          creditos: Duende Inexistente
+          oglink: 
+      path: "_transcripts"
+    values:
+          layout: comicpage
+          imagen: ksbdcoverchapter1.webp
+          alt:
           capitulo: 99
           pagina: 99
           libro: 99
