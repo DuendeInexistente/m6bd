@@ -1,13 +1,30 @@
-{% assign next_i = nil %}
-{% assign prev_i = nil %}
-
-{% assign navpag = page.pagina %}
-{% assign prepag = navpag | minus: 1 %}
-{% assign nexpag = navpag | plus: 1 %}
-
 {% assign navcap = page.capitulo %}
 {% assign precap = navcap | minus: 1 %}
 {% assign nexcap = navcap | plus: 1 %}
+
+{% if page.collection %}
+{% assign posts = site[page.collection]  %}
+
+{% if posts.size > 1 %}
+  {% assign prevurl = posts.last.url | remove: ".html" %}
+  {% assign nexturl = posts.first.url | remove: ".html" %}
+{% endif %}
+
+{% for links in posts %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = posts[forloop.index] %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+{% endif %}
+
+
 
 {% comment %}
 {{navpag}}
@@ -42,7 +59,7 @@
 			<p>][</p>
 			<p>
 				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.first == false %}
-				<a href="{{forloop.index | minus: 1}}.html">
+				<a href="{{ prevurl }}">
 				{% endif %}{%endfor%}
 				&lt;- Anterior
 				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.first == false %}
@@ -52,7 +69,7 @@
 			<p>]◝▩◜[</p>
 			<p>
 				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.last == false %}
-				<a href="{{forloop.index | plus: 1}}.html">
+				<a href="{{ nexturl }}">
 				{% endif %}{%endfor%}
 				Proxima -&gt;
 				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.last == false %}
