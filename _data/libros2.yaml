@@ -1,0 +1,23 @@
+uno:
+  numero: 1
+  nombre: Kill Six Billion Demons
+  traduccion: Mata seis billones de demonios
+dos:
+  numero: 2
+  nombre: Wielder of Names
+  traduccion: Portador de nombres
+  nota: Mejorar, wielder significa mas que solo portador
+tres:
+  numero: 3
+  nombre: King of Swords
+  traduccion: Rey de espadas
+cuatro:
+  numero: 5
+  nombre: Breaker of Infinities
+  traduccion: Destructor de infinidades
+  nota: Breaker significa mas rompedor que destructor. ¿Usar eso?
+cinco:
+  numero: 6
+  nombre: Wheel Smashing Lord
+  traduccion: Soberano de ruedas quebrantadas
+  nota: Mejorar
