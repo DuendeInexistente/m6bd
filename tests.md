@@ -51,3 +51,71 @@ asdasdsadasd
 
 {{ linkz }}
 {{ linkz2 }}
+
+
+
+| :    Easy Multiline   : |||
+| :----- | :----- | :------ |
+| Apple  | Banana | Orange  \
+| Apple  | Banana | Orange  \
+| Apple  | Banana | Orange
+| Apple  | Banana | Orange  \
+| Apple  | Banana | Orange  |
+| Apple  | Banana | Orange  |
+
+
+
+
+|         Original             |        Traduccion                                |            Notas   |
+|                     :-----   |         :-----                                   |            :------ |
+|Wait!                         |                                                  |                    |
+|                              |                                                  |                    |
+|Um... wow, sorry, I'm just,   |                                                  |                    \
+|like, really nervous.         |                                                  |                    |
+|                              |                                                  |                    |
+|Just relax, babe, it'll be    |                                                  |                    \
+|fine.                         |                                                  |                    |
+|                              |                                                  |                    |
+|I just like... should I take  |                                                  |                    |
+|off your pants?               |                                                  |                    |
+|                              |                                                  |                    |
+
+
+
+
+
+<table style="width:100%;font-variant: small-caps;">
+<th> Original </th><th> Traduccion</th><th> Notas</th>
+<tr><td>
+Wait!
+</td><td>
+¡Para!
+</td><td>
+El que
+</td></tr>
+</table>
+
+
+
+{% comment %}
+
+---
+libro: 1
+pagina: 1
+capitulo: 1
+imagen: 1.webp
+---
+
+
+<table style="width:100%;font-variant: small-caps;">
+<th> Original </th><th> Traduccion</th><th> Notas</th>
+<tr><td>
+Wait!
+</td><td>
+¡Para!
+</td><td>
+El que
+</td></tr>
+</table>
+
+{% endcomment %}
