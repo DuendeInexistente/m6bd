@@ -16,7 +16,12 @@
                 <img src="{{ page.imagen }}" style="max-width:50vw;">
             </div>
         </div>
-        <div class="traduccion">{{ content }}</div>
+        <div class="traduccion">
+            {% for trans in site.pages %}{% if trans.capitulo == page.capitulo and trans.pagina == page.pagina %}
+            <a style="font-size:xx-large;" href="{{ trans.url }}">Volver.</a>
+            {% endif %}{%endfor%}
+            <br>
+            {{ content }}</div>
     </div>
     </div>
     </div>
