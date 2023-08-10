@@ -10,23 +10,26 @@
 	  <div class="nav">{% include nav.html %}</div>
 	  <div class="page">
 
-	  <div class="banner" style="align-self:center"><img src=/titulo.webp></img></div>
+	  <div class="banner" style="align-self:center;"><img src=/titulo.webp></img></div>
 		 <div class="pagina"><img alt="{{ page.alt }}" src="{{ page.imagen }}"></img>
 		  <br>
 		  <div style="font-family:monospace;font-size:smaller;" class=navbutt>
 			  {% include navbutt.html %}
 		  </div>
-		 <div class="titulo">KBSD {{ page.capitulo }}—{{ page.pagina }}</div>
-		 <div class="creditos">Por Abbaddon. Traducido por {{ page.creditos }}.<a href="{{ page.oglink }}"> Link to pagina original.</a></div>
+		 <div class="titulo">KBSD {% include libro.html %} {{ page.capitulo }}—{{ page.pagina }}</div>
+		 <div class="creditos">
+					Por Abbaddon. Traducido por {{ page.creditos }}.
+					{% if page.oglink != nil %}<a href="{{ page.oglink }}"> Link a la pagina original.</a> {% endif %}
+					{% if page.oglink == nil %}<p style="color:white">Te falta metadata. Rellena oglink.</p> {% endif %}
+			</div>
 
 		  <div class="diatriba">{{ content }}</div>
-<details>
-    <summary>Transcripcion</summary>
+
 {% include transcripcion.html %}
 
 
-</details>
 		 </div></div>
+
 
 </body>
 </html>
