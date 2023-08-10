@@ -18,7 +18,7 @@
         </div>
         <div class="traduccion">
             {% for trans in site.pages %}{% if trans.capitulo == page.capitulo and trans.pagina == page.pagina %}
-            <a style="font-size:xx-large;" href="{{ trans.url }}">Volver.</a>
+            <a style="font-size:xx-large;" href="{{ site.baseurl }}{{ trans.url }}">Volver.</a>
             {% endif %}{%endfor%}
             <br>
             {{ content }}</div>
