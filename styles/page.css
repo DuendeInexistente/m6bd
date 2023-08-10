@@ -12,7 +12,7 @@
 }
 .nav {
 	float: left;
-	width: 10%;
+	width: 10vw;
 	height: 98vh;
 	padding:1vh;
 	overflow-y: scroll;
@@ -27,6 +27,25 @@
 	overflow-x:hidden;
 	display: flex;
 	flex-direction: column;
+}
+
+.tradupage{
+	padding-left:8px;
+	height: 98vh;
+	max-width:51vw;
+	padding:1vh;
+	overflow-y: scroll;
+}
+
+.traducont{
+	display: flex;
+	flex-direction: row;
+}
+.traduccion{
+	padding:8pt;
+	max-width: 39vw;
+	overflow-y:scroll;
+	max-height: 96vh;
 }
 
 .navbutt{

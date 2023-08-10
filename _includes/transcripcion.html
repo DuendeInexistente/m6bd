@@ -1,3 +1,6 @@
 {% for trans in site.transcripts %}{% if trans.capitulo == page.capitulo and trans.pagina == page.pagina %}
-				{{trans.content}}
+<details>
+    <summary>Transcripcion</summary>
+				{{trans.content | markdownify}}
+</details>
 {% endif %}{%endfor%}

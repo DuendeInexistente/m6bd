@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mata seis billones de demonios &raquo; {{ page.capitulo }} - {{ page.pagina}}</title>
+    <link rel='stylesheet' href='/styles/page.css'>
+</head>
+
+<body onload="scrollTo({{ page.capitulo }}{{ page.pagina }})">
+    <div class="nav">{% include nav.html %}</div>
+    <div class="traducont">
+        <div class="tradupage">
+            <div class=pagina style="max-height:100vh;">
+                <div style="font-family:monospace;font-size:xx-small;" class=navbutt>{% include navbutt.html %}</div>
+                <img src="{{ page.imagen }}" style="max-width:50vw;">
+            </div>
+        </div>
+        <div class="traduccion">{{ content }}</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!--
+   <div class="banner" style="align-self:center;"><img src=/titulo.webp></img></div>
+   <div class="pagina" style="align-self:left;"><img alt="{{ page.alt }}" src="{{ page.imagen }}"></img>
+    <br>
+
+   <div class="titulo">KBSD {{ page.capitulo }}—{{ page.pagina }}</div>
+   <div class="creditos">
+     Por Abbaddon. Traducido por {{ page.creditos }}.
+     {% if page.oglink != nil %}<a href="{{ page.oglink }}"> Link a la pagina original.</a> {% endif %}
+     {% if page.oglink == nil %}<p style="color:white">Te falta metadata. Rellena oglink.</p> {% endif %}
+   </div>
+
+    <div class="diatriba">{{ content }}</div>
+
+{% include transcripcion.html %}
+
+   </div></div>
+--->
+</body>
+
+</html>
