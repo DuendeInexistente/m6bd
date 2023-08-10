@@ -1,0 +1,45 @@
+{% comment %}
+{% for libro in site.data.libros %}
+ {% if libro.numero == page.libro %}
+		{{ libro.traduccion }}
+	{% endif %}
+{% endfor %}
+
+
+
+
+
+{{ site.data.libros2.1.nombre }}
+
+
+
+
+{% for libro in site.data.libros %}
+ {% if libro[1].numero == page.libro %}
+		{{ libro[1].traduccion }}
+	{% endif %}
+{% endfor %}
+
+
+FIXME: Uno de estos deberia funcionar, pero liquid es putañero con las variables. A hacer if then del infiernooooooo
+{% endcomment %}
+
+
+
+
+{% case page.libro %}
+
+{% when 1 %}
+ {{ site.data.libros2.uno.nombre }}
+{% when 2 %}
+ {{ site.data.libros2.dos.nombre }}
+{% when 3 %}
+ {{ site.data.libros2.tres.nombre }}
+{% when 4 %}
+ {{ site.data.libros2.cuatro.nombre }}
+{% when 5 %}
+ {{ site.data.libros2.cinco.nombre }}
+{% else %}
+ Pero que mierda
+{% endcase %}
+
