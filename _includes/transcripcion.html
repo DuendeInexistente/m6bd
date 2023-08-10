@@ -1,7 +1,7 @@
 {% for trans in site.transcripts %}{% if trans.capitulo == page.capitulo and trans.pagina == page.pagina %}
 
 <details>
-    <summary>Transcripcion. <a href="{{ trans.url }}">Link!</a></summary>
+    <summary>Transcripcion. <a href="{{ site.baseurl }}{{ trans.url }}">Link!</a></summary>
 				{{trans.content | markdownify}}
 </details>
 {% endif %}{%endfor%}

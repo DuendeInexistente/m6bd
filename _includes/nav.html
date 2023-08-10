@@ -10,7 +10,7 @@
 	<a id="{{ pages.capitulo }}{{ pages.pagina }}"></a>
 
 	{% if pages.url == page.url %}&#187;{% endif %}
-	{% if pages.url != page.url %}-<a href="{{ pages.url }}">{% endif %}
+	{% if pages.url != page.url %}-<a href="{{ site.baseurl }}{{ pages.url }}">{% endif %}
 	{{ pages.capitulo }} - {{ pages.pagina }}
 	{% if pages.url != page.url %}</a>{% endif %}
 	<br>

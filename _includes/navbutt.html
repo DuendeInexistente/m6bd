@@ -21,7 +21,7 @@
 
 			<p>
 				{% for pages in site.[page.collection] %}{% if forloop.first %}
-				<a href="{{pages.url}}">
+				<a href="{{ site.baseurl }}{{pages.url}}">
 				{%endif%}{%endfor%}
 
 					&lt;---Prim. pagina
@@ -30,7 +30,7 @@
 			<p>][</p>
 			<p>
 				{% for pages in site.[page.collection] %}{% if pages.capitulo == precap and pages.pagina == 0 %}
-				<a href="{{pages.url}}">
+				<a href="{{ site.baseurl }}{{pages.url}}">
 				{% endif %}{%endfor%}
 
 				&lt;--Cap. anterior
@@ -62,7 +62,7 @@
 			<p>][</p>
 			<p>
 				{% for pages in site.[page.collection] %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
-				<a href="{{pages.url}}">
+				<a href="{{ site.baseurl }}{{pages.url}}">
 				{% endif %}{%endfor%}
 				Proximo cap. --&gt;
 				{% for pages in site.[page.collection] %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
@@ -72,7 +72,7 @@
 			<p>][</p>
 			<p>
 				{% for pages in site.[page.collection] %}{% if forloop.last %}
-				<a href="{{pages.url}}">
+				<a href="{{ site.baseurl }}{{pages.url}}">
 				{%endif%}{%endfor%}
 				Ult. pagina---&gt;
 				</a>
