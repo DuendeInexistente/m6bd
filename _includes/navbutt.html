@@ -20,7 +20,7 @@
 
 
 			<p>
-				{% for pages in site.pages %}{% if forloop.first %}
+				{% for pages in site.[page.collection] %}{% if forloop.first %}
 				<a href="{{pages.url}}">
 				{%endif%}{%endfor%}
 
@@ -29,49 +29,49 @@
 			</p>
 			<p>][</p>
 			<p>
-				{% for pages in site.pages %}{% if pages.capitulo == precap and pages.pagina == 0 %}
+				{% for pages in site.[page.collection] %}{% if pages.capitulo == precap and pages.pagina == 0 %}
 				<a href="{{pages.url}}">
 				{% endif %}{%endfor%}
 
 				&lt;--Cap. anterior
 
-				{% for pages in site.pages %}{% if pages.capitulo == precap and pages.pagina == 0 %}
+				{% for pages in site.[page.collection] %}{% if pages.capitulo == precap and pages.pagina == 0 %}
 				</a>
 				{%endif%}{%endfor%}
 			</p>
 			<p>][</p>
 			<p>
-				{% for pages in site.pages %}{% if pages.url == page.url and forloop.first == false %}
+				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.first == false %}
 				<a href="{{forloop.index | minus: 1}}.html">
 				{% endif %}{%endfor%}
 				&lt;- Anterior
-				{% for pages in site.pages %}{% if pages.url == page.url and forloop.first == false %}
+				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.first == false %}
 				</a>
 				{% endif %}{%endfor%}
 			</p>
 			<p>]◝▩◜[</p>
 			<p>
-				{% for pages in site.pages %}{% if pages.url == page.url and forloop.last == false %}
+				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.last == false %}
 				<a href="{{forloop.index | plus: 1}}.html">
 				{% endif %}{%endfor%}
 				Proxima -&gt;
-				{% for pages in site.pages %}{% if pages.url == page.url and forloop.last == false %}
+				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.last == false %}
 				</a>
 				{% endif %}{%endfor%}
 			</p>
 			<p>][</p>
 			<p>
-				{% for pages in site.pages %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
+				{% for pages in site.[page.collection] %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
 				<a href="{{pages.url}}">
 				{% endif %}{%endfor%}
 				Proximo cap. --&gt;
-				{% for pages in site.pages %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
+				{% for pages in site.[page.collection] %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
 				</a>
 				{%endif%}{%endfor%}
 			</p>
 			<p>][</p>
 			<p>
-				{% for pages in site.pages %}{% if forloop.last %}
+				{% for pages in site.[page.collection] %}{% if forloop.last %}
 				<a href="{{pages.url}}">
 				{%endif%}{%endfor%}
 				Ult. pagina---&gt;
@@ -81,7 +81,7 @@
 {% comment %}
 //Functional prevpage link! Kind of
 
-    {% for pages in site.pages %}
+    {% for pages in site.[page.collection] %}
       {% if pages.capitulo == page.capitulo %}
         {% if pages.pagina == prepag %}
 	{% capture nexlin %} <a href="{{ pages.url }}">{{ pages.pagina }}</a> {% endcapture %}
@@ -96,7 +96,7 @@
 {%capture endlin %} {% endcapture %}
 {{endlin}}
 
-    {% for pages in site.pages %}
+    {% for pages in site.[page.collection] %}
       {% if pages.capitulo == page.capitulo %}
         {% if pages.pagina == prepag %}
 		{% capture nexlin %} <a href="{{ pages.url }}">{% endcapture %}
