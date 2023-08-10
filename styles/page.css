@@ -43,7 +43,7 @@
 }
 .traduccion{
 	padding:8pt;
-	max-width: 39vw;
+	width: 39vw;
 	overflow-y:scroll;
 	max-height: 96vh;
 }
@@ -77,4 +77,12 @@ a:hover {
 }
 a:visited {
 	color:#e9d10d;
+}
+
+
+
+
+td,th {
+  background-color: rgba(212, 150, 203, .2);
+  padding:2pt;
 }
