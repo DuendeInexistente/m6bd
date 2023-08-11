@@ -59,7 +59,7 @@
 			<p>][</p>
 			<p>
 				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.first == false %}
-				<a href="{{ prevurl }}">
+				<a href="{{ site.baseurl }}{{ prevurl }}">
 				{% endif %}{%endfor%}
 				&lt;- Anterior
 				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.first == false %}
@@ -69,7 +69,7 @@
 			<p>]◝▩◜[</p>
 			<p>
 				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.last == false %}
-				<a href="{{ nexturl }}">
+				<a href="{{ site.baseurl }}{{ nexturl }}">
 				{% endif %}{%endfor%}
 				Proxima -&gt;
 				{% for pages in site.[page.collection] %}{% if pages.url == page.url and forloop.last == false %}
