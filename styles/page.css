@@ -29,6 +29,10 @@
 	flex-direction: column;
 }
 
+.nota{
+	font-size:small;
+}
+
 .tradupage{
 	padding-left:8px;
 	height: 98vh;
