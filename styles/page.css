@@ -12,7 +12,7 @@
 }
 .nav {
 	float: left;
-	width: 10vw;
+	width: fit-content;
 	height: 98vh;
 	padding:1vh;
 	overflow-y: scroll;
