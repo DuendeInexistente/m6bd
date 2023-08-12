@@ -26,6 +26,10 @@
 
 
 
+
+
+
+
 {% comment %}
 {{navpag}}
 {{prepag}}
@@ -46,15 +50,26 @@
 			</p>
 			<p>][</p>
 			<p>
-				{% for pages in site.[page.collection] %}{% if pages.capitulo == precap and pages.pagina == 0 %}
-				<a href="{{ site.baseurl }}{{pages.url}}">
-				{% endif %}{%endfor%}
+
+<!-- Had to manually give jekyll a %break% because limit and first weren't working. Who knows why.-->
+				{% for pages in site.[page.collection] reversed %}
+					{% if pages.libro <= page.libro %}
+					{% if pages.capitulo != page.capitulo %}
+					{% unless pages.libro == page.libro  and pages.capitulo >= page.capitulo %}
+
+				<a href="{{ site.baseurl }}{{ pages.url }}">
+				
+				{% break %}{% endunless %}{% endif %}{% endif %}{% endfor %}
 
 				&lt;--Cap. anterior
 
-				{% for pages in site.[page.collection] %}{% if pages.capitulo == precap and pages.pagina == 0 %}
+			{% for pages in site.[page.collection] reversed %}
+					{% if pages.libro <= page.libro %}
+					{% if pages.capitulo != page.capitulo | limit: 1 %}
+					{% unless pages.libro == page.libro  and pages.capitulo >= page.capitulo %}
+
 				</a>
-				{%endif%}{%endfor%}
+				{% break %}{% endunless %]{% endif %}{% endif %}{% endif %}{% endfor %}
 			</p>
 			<p>][</p>
 			<p>
@@ -78,13 +93,19 @@
 			</p>
 			<p>][</p>
 			<p>
-				{% for pages in site.[page.collection] %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
+					{% for pages in site.[page.collection] %}
+					{% if pages.libro >= page.libro %}
+					{% if pages.capitulo != page.capitulo %}
+					{% unless pages.libro == page.libro  and pages.capitulo <= page.capitulo %}
 				<a href="{{ site.baseurl }}{{pages.url}}">
-				{% endif %}{%endfor%}
+				{% break %}{% endunless %}{% endif %}{% endif %}{%endfor%}
 				Proximo cap. --&gt;
-				{% for pages in site.[page.collection] %}{% if pages.capitulo == nexcap and pages.pagina == 0 %}
+					{% for pages in site.[page.collection] %}
+					{% if pages.libro >= page.libro %}
+					{% if pages.capitulo != page.capitulo %}
+					{% unless pages.libro == page.libro  and pages.capitulo <= page.capitulo %}
 				</a>
-				{%endif%}{%endfor%}
+				{% break %}{% endunless %{% endif %}{% endif %}{% endif %}{% endfor %}
 			</p>
 			<p>][</p>
 			<p>
