@@ -21,30 +21,17 @@
             <a style="font-size:xx-large;" href="{{ site.baseurl }}{{ trans.url }}">Volver.</a>
             {% endif %}{%endfor%}
             <br>
+
+
+{% include transtable.md %}
+
             {{ content }}</div>
     </div>
     </div>
     </div>
     </div>
     </div>
-    <!--
-   <div class="banner" style="align-self:center;"><img src=/titulo.webp></img></div>
-   <div class="pagina" style="align-self:left;"><img alt="{{ page.alt }}" src="{{ page.imagen }}"></img>
-    <br>
-
-   <div class="titulo">KBSD {{ page.capitulo }}—{{ page.pagina }}</div>
-   <div class="creditos">
-     Por Abbaddon. Traducido por {{ page.creditos }}.
-     {% if page.oglink != nil %}<a href="{{ page.oglink }}"> Link a la pagina original.</a> {% endif %}
-     {% if page.oglink == nil %}<p style="color:white">Te falta metadata. Rellena oglink.</p> {% endif %}
-   </div>
-
-    <div class="diatriba">{{ content }}</div>
-
-{% include transcripcion.html %}
-
-   </div></div>
---->
+  
 </body>
 
 </html>

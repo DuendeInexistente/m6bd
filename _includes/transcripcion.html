@@ -2,6 +2,8 @@
 
 <details>
     <summary>Transcripcion. <a href="{{ site.baseurl }}{{ trans.url }}">Link!</a></summary>
+				{% include transtable.md %}
 				{{trans.content | markdownify}}
+
 </details>
 {% endif %}{%endfor%}

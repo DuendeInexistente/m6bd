@@ -1,0 +1,37 @@
+- l: 1
+- c: 1
+- p: 1
+- 
+    linea: Wait!
+    traduccion: ¡Para!
+-
+    linea: Um… Wow, sorry, I’m just, like, really nervous.
+    traduccion: Uh… Wow, perdón, solo estoy un poco… Muy nerviosa.
+-
+    linea: Yeah, I know.
+    traduccion: Lo se.
+-
+    linea: Just relax, babe, it’ll be fine.
+    traduccion: Relájate, nena, todo esta bien.
+-
+    linea: I just like… Should I take off your pants?
+    traduccion: Solo es, yo… ¿debería sacarte los pantalones?
+-
+    linea: Babe-
+    traduccion: Nena-
+-
+    linea: I had only like, one beer. Is that enough?
+    traduccion: Solo tuve como una lata. ¿Eso alcanza?
+-
+    linea: Babe! Relax.
+    traduccion: ¡Nena! Relájate.
+-
+    linea: Its just-
+    traduccion: Es solo-
+-
+    linea: Relax.
+    traduccion: Relájate.
+-
+    tipo: alt
+    linea: test
+    traduccion: prueba
