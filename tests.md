@@ -18,6 +18,13 @@ oglink: http://killsixbilliondemons.com/comic/ksbd-chapter-1-1
 </ul>
 
 
+| Linea | Traduccion | Nota | 
+|=======|============|======|
+{% for linea in site.data.transcripciones.l1.c1_1 %}|{{ linea.linea }}|{{ linea.traduccion }}|{{ linea.nota }}|
+{% endfor %}
+
+{{ site.data.transcripciones.uno.e_e }}
+
 <table>
 <thead>
 <th>Numero</th><th>Original</th><th>Traduccion</th><th>Nota</th>
@@ -30,8 +37,6 @@ oglink: http://killsixbilliondemons.com/comic/ksbd-chapter-1-1
 {{ libro.numero }}
 {% endfor %}
 </table>
-
-
 
 <br> {{ page.title }}<br> 
 site.url: {{ site.url }}<br>
@@ -97,7 +102,26 @@ El que
 
 
 
+
 {% comment %}
+{% capture fofa %}
+
+{}
+
+{% endcapture %}
+
+
+{% assign for = site.pages %}
+
+
+
+---
+
+{{ site.pages.url | sort_human }}
+
+
+
+
 
 ---
 libro: 1
