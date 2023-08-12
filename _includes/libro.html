@@ -22,24 +22,28 @@
 
 
 FIXME: Uno de estos deberia funcionar, pero liquid es putañero con las variables. A hacer if then del infiernooooooo
+
+
+
 {% endcomment %}
-
-
-
 
 {% case page.libro %}
 
 {% when 1 %}
- {{ site.data.libros2.uno.nombre }}
+ {{ site.data.libros2.c1.traduccion }}
 {% when 2 %}
- {{ site.data.libros2.dos.nombre }}
+ {{ site.data.libros2.c2.traduccion }}
 {% when 3 %}
- {{ site.data.libros2.tres.nombre }}
+ {{ site.data.libros2.c3.traduccion }}
 {% when 4 %}
- {{ site.data.libros2.cuatro.nombre }}
+ {{ site.data.libros2.c4.traduccion }}
 {% when 5 %}
- {{ site.data.libros2.cinco.nombre }}
+ {{ site.data.libros2.c5.traduccion }}
 {% else %}
  Pero que mierda
 {% endcase %}
 
+
+
+
+ {{ site.data.libros2.c[page.libro].traduccion }}

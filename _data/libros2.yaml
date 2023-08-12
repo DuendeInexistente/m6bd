@@ -1,22 +1,22 @@
-uno:
+c1:
   numero: 1
   nombre: Kill Six Billion Demons
   traduccion: Mata seis billones de demonios
-dos:
+c2:
   numero: 2
   nombre: Wielder of Names
   traduccion: Portador de nombres
   nota: Mejorar, wielder significa mas que solo portador. Esgrimidor? Brandidor? Ejerzor? Empuñador? Abandonamos la idea original y usamos "Maestro"?
-tres:
+c3:
   numero: 3
   nombre: King of Swords
   traduccion: Rey de espadas
-cuatro:
+c4:
   numero: 4
   nombre: Breaker of Infinities
   traduccion: Destructor de infinidades
   nota: Breaker significa mas rompedor que destructor. ¿Usar eso? Suena burdo.
-cinco:
+c5:
   numero: 5
   nombre: Wheel Smashing Lord
   traduccion: Soberano de ruedas quebrantadas
